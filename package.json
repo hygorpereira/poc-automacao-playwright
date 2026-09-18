@@ -1,0 +1,23 @@
+{
+  "name": "poc-automacao-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Hygor Pereira"
+  },  
+  "description": "POC de automacao E2E com Playwright e TypeScript",
+  "scripts": {
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "install:browsers": "playwright install chromium firefox webkit"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1"
+  }
+}
