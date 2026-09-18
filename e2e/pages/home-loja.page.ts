@@ -18,7 +18,7 @@ export class homeLoja { // Page Object da página inicial da loja
 
     // Atribuições: aqui os locators são de fato criados e guardados nas propriedades acima
     this.titulo = pagina.getByRole('heading', { name: /sauce demo/i }); // busca por role heading + texto (case-insensitive).
-    this.linkLogin = pagina.getByRole('link', { name: 'Log In' }); // busca por role link + texto "Log In".
+    this.linkLogin = pagina.getByRole('link', { name: 'Log In teste' }); // busca por role link + texto "Log In".
     this.gridProdutos = pagina.locator('section[class*=product-grid]'); // busca por classe CSS parcial o grid de produtos.
     this.linkCarrinho = pagina.getByRole('link', { name: 'My Cart' }); // busca por role link + "My Cart".
     this.formularioPesquisa = pagina.locator('form[action="/search"]'); // busca pelo atributo action do form.
