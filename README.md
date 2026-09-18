@@ -206,7 +206,7 @@ npm install
 npx playwright install --with-deps chromium firefox webkit
 npx playwright test
 ```
-'npm install' usa exatamente a versão registradaa no 'package.json'. 
+O comando 'npm install' usa exatamente a versão registrada no 'package.json'. 
 
 O parâmetro '--with-deps' instala também dependências de sistema necessárias em runners Linux limpos.
 
@@ -215,11 +215,11 @@ O relatório HTML pode ser publicado como artefato da pipeline. As pastas 'playw
 
 ## 12. Orientações em caso de falhas na execução
 
-### Node.js ou npm não encontrados
+#### Node.js ou npm não encontrados
 
 Instale o Node.js 20 ou superior e abra um novo terminal. Depois confirme com `node --version` e `npm --version`.
 
-### Navegador não encontrado
+#### Navegador não encontrado
 
 Execute novamente:
 
@@ -233,19 +233,19 @@ Em Linux:
 npx playwright install --with-deps chromium firefox webkit
 ```
 
-### Site indisponível ou lento
+#### Site indisponível ou lento
 
 Abra manualmente `https://sauce-demo.myshopify.com` no navegador. Se o site estiver indisponível, os testes não poderão ser concluídos porque dependem da página pública.
 
-### Falha em apenas um navegador
+#### Falha em apenas um navegador
 
 Execute o navegador isoladamente, por exemplo `npm run test:webkit`, e abra o relatório com `npm run report`.
 
 Execute o navegador isoladamente, por exemplo `npm run test:firefox`, e abra o relatório com `npm run report`. Verifique o screenshot, o vídeo e o trace disponíveis em caso de falha.
 
-### Locators não encontrados
+#### Locators não encontrados
 
-O site é público e pode alterar seu HTML sem aviso. Atualize os locators em tests/pages/store.page.ts ou no cenário correspondente e execute novamente npm run lint e npm test.
+O site é público e pode alterar seu HTML sem aviso. Atualize os locators em tests/pages/home-loja.page.ts ou no cenário correspondente e execute novamente npm test.
 
 ## 13. Observação
 
