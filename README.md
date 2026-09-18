@@ -41,7 +41,7 @@ unzip poc-automacao-playwright.zip
 cd poc-automacao-playwright
 ```
 
-Ao final deste passo, o diretório atual deve conter `package.json`, `playwright.config.ts` e a pasta `tests`.
+Ao final deste passo, o diretório atual deve conter `package.json`, `playwright.config.ts` e a pasta `e2e`.
 
 ## 3. Instalar as dependências do Node.js
 
@@ -57,7 +57,9 @@ As dependências ficam na pasta `node_modules`.
 
 ## 4. Instalar os navegadores
 
-A POC usa três projetos Playwright: Chromium, Firefox e WebKit. Instale os três navegadores:
+A POC usa três projetos Playwright: Chromium, Firefox e WebKit. 
+
+Instale os três navegadores:
 
 ```bash
 npx playwright install chromium firefox webkit
@@ -200,11 +202,13 @@ playwright.config.ts  `define a URL base da aplicação testada neste POC, o for
 Uma pipeline CI precisa realizar, nesta ordem:
 
 ```bash
-npm ci
+npm install
 npx playwright install --with-deps chromium firefox webkit
-npm test
+npx playwright test
 ```
-'npm ci' usa exatamente as versões registradas no 'package-lock.json'. O parâmetro '--with-deps' instala também dependências de sistema necessárias em runners Linux limpos.
+'npm install' usa exatamente a versão registradaa no 'package.json'. 
+
+O parâmetro '--with-deps' instala também dependências de sistema necessárias em runners Linux limpos.
 
 O relatório HTML pode ser publicado como artefato da pipeline. As pastas 'playwright-report' e 'test-results' devem ser preservadas quando houver falha para permitir investigação.
 
