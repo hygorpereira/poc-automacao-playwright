@@ -27,7 +27,19 @@ No Windows, recomenda-se usar PowerShell ou Windows Terminal. No macOS e Linux, 
 
 ## 2. Obter o projeto
 
+Clone o repositório Git e entre na pasta correspondente:
 
+```bash
+git clone https://github.com/hygorpereira/poc-automacao-playwright.git
+cd poc-automacao-playwright
+```
+
+Caso possua o repositório em .zip (poc-automacao-playwright.zip), basta descompactá-lo e acessar sua pasta correspondente:
+
+```bash
+unzip poc-automacao-playwright.zip
+cd poc-automacao-playwright
+```
 
 Ao final deste passo, o diretório atual deve conter `package.json`, `playwright.config.ts` e a pasta `tests`.
 
