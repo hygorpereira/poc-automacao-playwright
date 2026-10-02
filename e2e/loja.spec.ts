@@ -45,7 +45,7 @@ test.describe('Produtos', () => {
     await loja.abrir(); // Abre a página inicial.
     await loja.abrirProduto(produtoDetalhe.nome); // Abre o produto escolhido.
 
-    await expect(page).toHaveURL(/grey-jacket/); // Confirma a URL do produto.
+    await expect(page).toHaveURL(/gteste/); // Confirma a URL do produto.
     await expect(page.getByRole('heading', { name: /grey jacket/i })).toBeVisible(); // Confirma o título do produto.
     await expect(loja.imagemProduto(produtoDetalhe.nome)).toHaveAttribute('alt', produtoDetalhe.nome); // Confirma a imagem correta.
     await expect(loja.precoProduto(produtoDetalhe.preco)).toBeVisible(); // Confirma o preço do produto.
